@@ -1,0 +1,15 @@
+[project]
+name = "bento-test"
+version = "0.0.1"
+description = "Hello world testing spear-dsp from the private JFrog PyPI index with BentoML."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "bentoml==1.4.39",
+  "spear-dsp==2.1.0",
+]
+
+[tool.uv]
+sources.spear-dsp = { index = "spear-ai" }
+index = [
+  { name = "spear-ai", url = "https://spearai.jfrog.io/artifactory/api/pypi/spear-ai-pypi/simple", explicit = true },
+]
