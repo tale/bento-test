@@ -1,0 +1,15 @@
+name: ${DEPLOYMENT_NAME}
+access_authorization: false
+bento: service:HelloSpearDsp
+cluster: gcp-us-central-1
+envs: []
+secrets:
+  - jfrog-build-credentials
+services:
+  HelloSpearDsp:
+    deployment_strategy: Recreate
+    envs: []
+    instance_type: cpu.1
+    scaling:
+      min_replicas: 0
+      max_replicas: 1
